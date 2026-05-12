@@ -50,20 +50,20 @@ export function HeroSection() {
       id="home"
       className="relative isolate w-full overflow-hidden pb-20 pt-10 sm:pt-16 lg:pt-20"
     >
-      {/* Sky gradient + cream blob */}
+      {/* Sky gradient + cream blob (lightens to cream day, deepens to night sky in dark mode) */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-b from-[#FFE9A5] via-[#FFF3CD] to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-b from-[#FFE9A5] via-[#FFF3CD] to-transparent dark:from-slate-900 dark:via-slate-950 dark:to-transparent" />
         <motion.span
-          className="absolute -top-24 -left-24 h-96 w-96 bg-primary/30 animate-blob"
+          className="absolute -top-24 -left-24 h-96 w-96 bg-primary/30 animate-blob dark:bg-primary/15"
           aria-hidden="true"
         />
         <motion.span
-          className="absolute top-32 -right-20 h-80 w-80 bg-secondary/40 animate-blob"
+          className="absolute top-32 -right-20 h-80 w-80 bg-secondary/40 animate-blob dark:bg-secondary/20"
           style={{ animationDelay: "-4s" }}
           aria-hidden="true"
         />
         <motion.span
-          className="absolute bottom-20 left-1/3 h-72 w-72 bg-[var(--sunshine-magenta)]/20 animate-blob"
+          className="absolute bottom-20 left-1/3 h-72 w-72 bg-[var(--sunshine-magenta)]/20 animate-blob dark:bg-[var(--sunshine-magenta)]/15"
           style={{ animationDelay: "-8s" }}
           aria-hidden="true"
         />
@@ -110,9 +110,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white/90 px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-foreground shadow-sm sm:text-sm"
+          className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white/90 px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-foreground shadow-sm sm:text-sm dark:border-yellow-300/40 dark:bg-slate-900/80 dark:text-slate-100"
         >
-          <Sparkles className="h-4 w-4 text-[var(--sunshine-orange)]" />
+          <Sparkles className="h-4 w-4 text-[var(--sunshine-orange)] dark:text-yellow-300" />
           Now Enrolling for Fall — Limited Spots
         </motion.div>
 
@@ -133,42 +133,57 @@ export function HeroSection() {
           />
         </motion.div>
 
-        <h1 className="font-heading text-4xl font-extrabold leading-[1.02] text-foreground text-balance sm:text-6xl lg:text-7xl xl:text-8xl">
+        <h1 className="font-heading text-4xl font-extrabold leading-[1.02] text-foreground text-balance sm:text-6xl lg:text-7xl xl:text-8xl dark:text-white">
           <span className="block">A happy place to</span>
           <AnimatedGradientText className="block text-5xl font-black sm:text-7xl lg:text-8xl">
             learn, grow & shine.
           </AnimatedGradientText>
         </h1>
 
-        <p className="mt-6 max-w-2xl font-display text-lg font-medium text-muted-foreground sm:text-xl lg:text-2xl text-pretty">
+        <p className="mt-6 max-w-2xl font-display text-lg font-medium text-muted-foreground sm:text-xl lg:text-2xl text-pretty dark:text-slate-300">
           A joyful, NYS-licensed daycare and learning lab in Jamaica, NY for
-          kids <strong className="text-foreground">6 weeks to 12 years</strong>.
-          Big imaginations, tiny scientists, brilliant futures.
+          kids{" "}
+          <strong className="text-foreground dark:text-yellow-300">
+            6 weeks to 12 years
+          </strong>
+          . Big imaginations, tiny scientists, brilliant futures.
         </p>
 
         <div className="mt-9 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
-          <PulsatingButton className="w-full max-w-xs px-8 py-4 text-base sm:w-auto">
+          <PulsatingButton
+            type="button"
+            onClick={() => {
+              const target = document.getElementById("contact");
+              target?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className="w-full max-w-xs px-8 py-4 text-base sm:w-auto"
+            aria-label="Schedule a tour — jump to the contact form"
+          >
             <Sparkles className="h-5 w-5" aria-hidden="true" />
             Schedule a Tour
           </PulsatingButton>
           <a
-            href="tel:7184046909"
-            className="inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full border-2 border-foreground/15 bg-white px-7 py-4 font-display text-base font-bold text-foreground shadow-md transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 sm:w-auto"
+            href="tel:+17184046909"
+            aria-label="Call Sunshine's Learning Laboratory at (718) 404-6909"
+            className="inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full border-2 border-foreground/15 bg-white px-7 py-4 font-display text-base font-bold text-foreground shadow-md transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 sm:w-auto dark:bg-slate-900 dark:text-slate-100 dark:border-white/15"
           >
             <PhoneCall className="h-5 w-5 text-[var(--sunshine-blue)]" aria-hidden="true" />
             (718) 404-6909
           </a>
         </div>
 
-        <ul className="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm">
+        <ul className="mt-10 flex flex-wrap items-center justify-center gap-2 text-sm sm:gap-3">
           {TRUST.map(({ icon: Icon, label }) => (
-            <li
+            <motion.li
               key={label}
-              className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-white/80 px-4 py-2 font-display font-bold text-foreground shadow-sm backdrop-blur"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
+              className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-white/80 px-3 py-1.5 font-display text-xs font-bold text-foreground shadow-sm backdrop-blur transition-transform duration-200 hover:-translate-y-0.5 sm:px-4 sm:py-2 sm:text-sm dark:border-white/20 dark:bg-white/10 dark:text-slate-100"
             >
-              <Icon className="h-4 w-4 text-[var(--sunshine-blue)]" aria-hidden="true" />
+              <Icon className="h-4 w-4 text-[var(--sunshine-blue)] dark:text-sky-300" aria-hidden="true" />
               {label}
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

@@ -22,22 +22,32 @@ export function IntroLoader({
   const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // Decide synchronously after mount whether to show.
+  // Decide synchronously after mount whether to show. We defer the
+  // setState calls into a microtask so the effect body itself stays free
+  // of synchronous state updates (React 19 preferred pattern).
   useEffect(() => {
     if (typeof window === "undefined") return;
-    try {
-      const seen = window.sessionStorage.getItem(STORAGE_KEY);
-      const prefersReduce = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
-      if (!seen && !prefersReduce) {
+    let cancelled = false;
+    const decide = () => {
+      if (cancelled) return;
+      try {
+        const seen = window.sessionStorage.getItem(STORAGE_KEY);
+        const prefersReduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (!seen && !prefersReduce) {
+          setShouldRender(true);
+          setVisible(true);
+        }
+      } catch {
         setShouldRender(true);
         setVisible(true);
       }
-    } catch {
-      setShouldRender(true);
-      setVisible(true);
-    }
+    };
+    queueMicrotask(decide);
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const dismiss = useCallback(() => {
@@ -91,7 +101,7 @@ export function IntroLoader({
             autoPlay
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             onCanPlay={() => setVideoReady(true)}
             onEnded={dismiss}
             onError={dismiss}

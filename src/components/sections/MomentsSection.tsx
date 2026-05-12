@@ -6,30 +6,30 @@ import { NumberTicker } from "@/components/ui/number-ticker";
 import { Sparkles } from "lucide-react";
 
 const STATS = [
-  { value: 12, suffix: "", label: "Kids per class" },
-  { value: 6, suffix: "w+", label: "From 6 weeks old" },
-  { value: 4, suffix: "★", label: "NYS licensed program" },
-  { value: 100, suffix: "%", label: "Whole-child focus" },
+  { value: 200, suffix: "+", label: "Happy families" },
+  { value: 12, suffix: " yrs", label: "Of operation" },
+  { value: 8, suffix: "", label: "Enrichment programs" },
+  { value: 100, suffix: "%", label: "NYS licensed" },
 ];
 
 const MOMENTS = [
   {
-    src: "/images/mascot-with-kids-1.png",
-    alt: "Sunny the mascot reading with a small group of kids",
+    src: "/storycircle.png",
+    alt: "Story circle icon — kids gathered around a book at Sunshine's",
     label: "Story circle",
     badge: "Daily",
     color: "var(--sunshine-orange)",
   },
   {
-    src: "/images/mascot-with-kids-2.png",
-    alt: "Mascot doing a science experiment with kids",
+    src: "/images/sunshine-assets.png",
+    alt: "Sunshine's Learning Laboratory branded science and STEM assets",
     label: "Mini lab time",
     badge: "STEM",
     color: "var(--sunshine-blue)",
   },
   {
-    src: "/images/mascot-with-kids-3.png",
-    alt: "Mascot dancing with kids in a bright classroom",
+    src: "/danceparty.png",
+    alt: "Dance party icon — kids dancing together at Sunshine's",
     label: "Dance party!",
     badge: "Fri",
     color: "var(--sunshine-magenta)",
@@ -40,14 +40,14 @@ export function MomentsSection() {
   return (
     <section
       id="moments"
-      className="relative w-full overflow-hidden py-20 sm:py-28"
+      className="relative w-full overflow-hidden py-20 sm:py-24"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-display text-sm font-extrabold uppercase tracking-widest text-[var(--sunshine-orange)]">
+          <p className="font-display text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[var(--sunshine-orange)] dark:text-yellow-300">
             Moments we love
           </p>
-          <h2 className="mt-2 font-heading text-4xl font-black leading-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
+          <h2 className="mt-2 font-heading text-4xl font-black leading-[1.05] text-foreground sm:text-5xl lg:text-6xl text-balance dark:text-white">
             Big <span className="wavy-underline">imaginations</span>, even bigger smiles.
           </h2>
         </div>
@@ -60,7 +60,8 @@ export function MomentsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: i * 0.1, duration: 0.55 }}
-              className="group relative overflow-hidden rounded-[32px] border-4 border-white bg-white shadow-[0_30px_60px_-30px_rgba(31,42,68,0.4)]"
+              whileHover={{ y: -4 }}
+              className="group relative overflow-hidden rounded-[32px] border-4 border-white bg-white shadow-[0_30px_60px_-30px_rgba(31,42,68,0.4)] transition-shadow duration-300 hover:shadow-[0_40px_80px_-30px_rgba(31,42,68,0.45)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] dark:hover:shadow-[0_40px_80px_-30px_rgba(0,0,0,0.75)]"
             >
               <div
                 className={`relative aspect-[4/5] w-full ${i === 2 ? "hidden lg:block" : ""}`}
@@ -101,7 +102,7 @@ export function MomentsSection() {
                 </div>
               )}
               <figcaption className="flex items-center justify-between px-5 py-4">
-                <span className="font-heading text-xl font-extrabold text-foreground">
+                <span className="font-heading text-xl font-extrabold text-foreground dark:text-white">
                   {m.label}
                 </span>
                 <span className="h-2.5 w-2.5 rounded-full" style={{ background: m.color }} aria-hidden="true" />
@@ -110,14 +111,16 @@ export function MomentsSection() {
           ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-4 rounded-[32px] border-4 border-white bg-white/80 p-6 shadow-xl backdrop-blur sm:grid-cols-4 sm:p-8">
+        <div className="mt-16 grid grid-cols-2 gap-4 rounded-[32px] border-4 border-white bg-white/80 p-6 shadow-xl backdrop-blur sm:grid-cols-4 sm:p-8 dark:border-white/10 dark:bg-slate-900/80">
           {STATS.map((s) => (
             <div key={s.label} className="text-center">
-              <p className="font-heading text-4xl font-black text-foreground sm:text-5xl">
+              <p className="font-heading text-4xl font-black text-foreground sm:text-5xl dark:text-white">
                 <NumberTicker value={s.value} />
-                <span className="text-[var(--sunshine-orange)]">{s.suffix}</span>
+                <span className="text-[var(--sunshine-orange)] dark:text-yellow-300">
+                  {s.suffix}
+                </span>
               </p>
-              <p className="mt-1 font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">
+              <p className="mt-1 font-display text-sm font-bold uppercase tracking-wider text-muted-foreground dark:text-slate-400">
                 {s.label}
               </p>
             </div>

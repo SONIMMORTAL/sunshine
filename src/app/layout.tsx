@@ -2,6 +2,14 @@ import type { Metadata, Viewport } from "next";
 import { Nunito, Fredoka, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import { IntroLoader } from "@/components/IntroLoader";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { SkipToContent } from "@/components/SkipToContent";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { siteConfig, SITE_URL } from "@/lib/site-config";
+import {
+  buildLocalBusinessJsonLd,
+  buildWebsiteJsonLd,
+} from "@/lib/structured-data";
 
 const bodyFont = Nunito({
   variable: "--font-sans",
@@ -21,22 +29,87 @@ const displayFont = Baloo_2({
   display: "swap",
 });
 
+/**
+ * Root metadata used as the default for every route. Owners can override the
+ * canonical site URL by setting NEXT_PUBLIC_SITE_URL at build time; otherwise
+ * the placeholder in `site-config.ts` is used. TODO: confirm domain.
+ */
 export const metadata: Metadata = {
-  title: "Sunshine's Learning Laboratory — Daycare in Jamaica, NY",
-  description:
-    "A joyful, NYS-licensed daycare in Jamaica, NY for kids 6 weeks to 12 years. Learn, grow, play, and share in our STEM-rich, Montessori-inspired classrooms. Call (718) 404-6909.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${siteConfig.name} — NYS-Licensed Daycare in Jamaica, NY`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  keywords: [...siteConfig.keywords],
+  authors: [...siteConfig.authors],
+  creator: siteConfig.legalName,
+  publisher: siteConfig.legalName,
+  category: siteConfig.category,
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Sunshine's Learning Laboratory",
-    description:
-      "A joyful daycare and learning lab in Jamaica, NY. NYS-licensed, ages 6 weeks–12 years.",
-    images: ["/CTABANNER.png"],
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — A happy place to learn, grow & shine.`,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} — NYS-licensed daycare for kids 6 weeks to 12 years.`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — A happy place to learn, grow & shine.`,
+    description: siteConfig.shortDescription,
+    images: [siteConfig.ogImage],
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/manifest.webmanifest",
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": siteConfig.shortName,
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFC233",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FFC233" },
+    { media: "(prefers-color-scheme: dark)", color: "#14182A" },
+  ],
+  colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -44,14 +117,42 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const localBusinessLd = buildLocalBusinessJsonLd();
+  const websiteLd = buildWebsiteJsonLd();
+
   return (
     <html
       lang="en"
       className={`${bodyFont.variable} ${headingFont.variable} ${displayFont.variable} h-full antialiased font-sans`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Performance: preconnect to third-party origins used on the page */}
+        <link rel="preconnect" href="https://i.pravatar.cc" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://i.pravatar.cc" />
+        <link rel="dns-prefetch" href="https://maps.google.com" />
+        <link rel="dns-prefetch" href="https://www.google.com" />
+      </head>
       <body className="min-h-full flex flex-col">
-        <IntroLoader videoSrc="/introvideo.mp4" maxDurationMs={6500} />
-        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessLd) }}
+        />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SkipToContent />
+          <IntroLoader videoSrc="/introvideo.mp4" maxDurationMs={6500} />
+          {children}
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );
