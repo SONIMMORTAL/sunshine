@@ -23,7 +23,7 @@ const COLS = [
         href: "https://maps.google.com/?q=159-14+134th+Avenue,+1st+Floor,+Jamaica,+NY+11434",
         icon: MapPin,
       },
-      { label: "Mon–Fri · 7:00 AM – 6:30 PM", href: "#tuition", icon: Clock4 },
+      { label: "Mon–Fri · 8:00 AM – 6:00 PM", href: "#tuition", icon: Clock4 },
     ],
   },
 ];

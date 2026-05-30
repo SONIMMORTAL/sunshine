@@ -120,7 +120,7 @@ export function LocationSection() {
                 Hours
               </p>
               <p className="mt-2 font-display text-base font-bold text-foreground dark:text-slate-100">
-                Monday – Friday · 7:00 AM – 6:30 PM
+                Monday – Friday · 8:00 AM – 6:00 PM
               </p>
               <p className="mt-1 font-display text-sm text-muted-foreground dark:text-slate-400">
                 Closed weekends and major holidays.
