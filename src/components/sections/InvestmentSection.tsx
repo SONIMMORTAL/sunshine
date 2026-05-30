@@ -35,30 +35,18 @@ const PROGRAMS = [
   {
     name: "Preschool",
     age: "3 – 5 years",
-    weekly: "$284",
+    weekly: "$284 - $300",
     color: "var(--sunshine-blue)",
     bg: "bg-[var(--sunshine-blue)]/10",
     Icon: BookOpen,
     featured: true,
     perks: [
       "Phonics, math & STEM",
-      "Spanish immersion daily",
       "Mini lab experiments",
+      "Autism spectrum trained staff",
     ],
   },
-  {
-    name: "Pre-K",
-    age: "4 – 5 years",
-    weekly: "$284",
-    color: "var(--sunshine-green)",
-    bg: "bg-[var(--sunshine-green)]/10",
-    Icon: Backpack,
-    perks: [
-      "Kindergarten readiness",
-      "Writing & reading prep",
-      "Field trips & special guests",
-    ],
-  },
+
   {
     name: "School-Age",
     age: "5 – 12 years",
@@ -75,16 +63,16 @@ const PROGRAMS = [
 ];
 
 const HOURS = [
-  { day: "Monday", time: "7:00 AM – 6:30 PM" },
-  { day: "Tuesday", time: "7:00 AM – 6:30 PM" },
-  { day: "Wednesday", time: "6:30 AM – 6:30 PM", highlight: true },
-  { day: "Thursday", time: "7:00 AM – 6:30 PM" },
-  { day: "Friday", time: "7:00 AM – 6:30 PM" },
+  { day: "Monday", time: "8:00 AM – 6:00 PM" },
+  { day: "Tuesday", time: "8:00 AM – 6:00 PM" },
+  { day: "Wednesday", time: "8:00 AM – 6:00 PM" },
+  { day: "Thursday", time: "8:00 AM – 6:00 PM" },
+  { day: "Friday", time: "8:00 AM – 6:00 PM" },
 ];
 
 export function InvestmentSection() {
   return (
-    <section id="tuition" className="relative w-full py-20 sm:py-24">
+    <section id="tuition" className="relative w-full py-24 sm:py-32">
       <div id="programs" className="absolute -top-24" aria-hidden="true" />
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -102,7 +90,7 @@ export function InvestmentSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PROGRAMS.map((p, i) => (
             <motion.article
               key={p.name}
@@ -156,7 +144,7 @@ export function InvestmentSection() {
           ))}
         </div>
 
-        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[1.2fr_1fr]">
+        <div className="mx-auto mt-14 max-w-2xl">
           <div className="relative overflow-hidden rounded-[32px] border-4 border-white bg-white p-1 shadow-2xl dark:border-white/10 dark:bg-slate-900">
             <ShineBorder shineColor={["#FFC233", "#2F6CFF", "#E54CB1"]} className="z-0" />
             <div className="relative z-10 rounded-[28px] bg-white p-6 sm:p-8 dark:bg-slate-900">
@@ -183,22 +171,8 @@ export function InvestmentSection() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 font-display text-sm italic text-muted-foreground dark:text-slate-400">
-                ✨ Wednesdays open at 6:30 AM for early-shift parents.
-              </p>
-            </div>
-          </div>
 
-          <div className="relative overflow-hidden rounded-[32px] border-4 border-white shadow-2xl dark:border-white/10">
-            <Image
-              src="/flyer.jpg"
-              alt="Sunshine's Learning Laboratory program flyer with hours, ages, and call-out details."
-              width={1200}
-              height={1500}
-              sizes="(max-width: 1024px) 90vw, 480px"
-              loading="lazy"
-              className="block h-full w-full object-cover"
-            />
+            </div>
           </div>
         </div>
       </div>

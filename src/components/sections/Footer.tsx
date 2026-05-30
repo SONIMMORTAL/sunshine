@@ -17,7 +17,7 @@ const COLS = [
     title: "Contact",
     links: [
       { label: "(718) 404-6909", href: "tel:+17184046909", icon: PhoneCall },
-      { label: "hello@sunshineslearninglab.com", href: "mailto:hello@sunshineslearninglab.com", icon: Mail },
+      { label: "sunshineslearninglaboratoryinc@gmail.com", href: "mailto:sunshineslearninglaboratoryinc@gmail.com", icon: Mail },
       {
         label: "159-14 134th Ave, Jamaica, NY 11434",
         href: "https://maps.google.com/?q=159-14+134th+Avenue,+1st+Floor,+Jamaica,+NY+11434",

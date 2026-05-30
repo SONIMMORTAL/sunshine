@@ -60,7 +60,7 @@ export function CTASection() {
           className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 bg-white/30 px-5 py-2 font-display text-xs font-extrabold uppercase tracking-[0.2em] text-[#1F2A44] backdrop-blur"
         >
           <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-          Now Enrolling · Limited Spots
+          Limited spots available
         </motion.span>
 
         <motion.h2
@@ -127,11 +127,11 @@ export function CTASection() {
             159-14 134th Ave, Jamaica, NY 11434
           </a>
           <a
-            href="mailto:hello@sunshineslearninglab.com"
+            href="mailto:sunshineslearninglaboratoryinc@gmail.com"
             className="inline-flex items-center justify-center gap-3 rounded-3xl border-2 border-white/40 bg-white/30 px-5 py-4 font-display text-base font-bold text-[#1F2A44] backdrop-blur transition-colors hover:bg-white/50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/60"
           >
             <Mail className="h-5 w-5" aria-hidden="true" />
-            hello@sunshineslearninglab.com
+            sunshineslearninglaboratoryinc@gmail.com
           </a>
         </div>
       </div>

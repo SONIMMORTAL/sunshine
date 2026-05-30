@@ -14,7 +14,7 @@ const FAQS: readonly FaqEntry[] = [
   {
     question: "What hours are you open?",
     answer:
-      "We&rsquo;re open Monday through Friday from 7:00 AM to 6:30 PM, with extended early-shift hours on Wednesdays. We&rsquo;re closed on major federal holidays.",
+      "We&rsquo;re open Monday through Friday from 8:00 AM to 6:00 PM. We&rsquo;re closed on major federal holidays.",
   },
   {
     question: "What are your teacher-to-child ratios?",
@@ -24,7 +24,12 @@ const FAQS: readonly FaqEntry[] = [
   {
     question: "Are meals and snacks included?",
     answer:
-      "Yes &mdash; weekly tuition includes a hot breakfast, lunch, and two snacks. Menus are pediatrician-reviewed, kid-tested, and rotate every two weeks. We accommodate allergies and most dietary restrictions; please share specifics on your tour.",
+      "Yes &mdash; weekly tuition includes a hot breakfast, lunch, and two snacks. Menus are pediatrician-reviewed, kid-tested, and rotate every two weeks. We accommodate allergies and most dietary restrictions; please share specifics on your tour.<br/><br/><strong>Milk Policy:</strong> If your child prefers or requires a specific type of milk, please provide enough for the duration of their stay. Please note that New York State regulations require us to serve whole milk to children under 1 year of age, and 1% milk to children 2 and older, unless we have a doctor's note on file suggesting an alternative.",
+  },
+  {
+    question: "Do you offer an After School program and transportation?",
+    answer:
+      "We offer a wonderful After School program! While we do not provide our own transportation, you can easily coordinate with your child's school to designate Sunshine's Learning Laboratory as their official school bus drop-off location.",
   },
   {
     question: "What is your sick policy?",
@@ -86,7 +91,7 @@ export function FAQSection() {
     <section
       id="faq"
       aria-labelledby={headingId}
-      className="relative w-full overflow-hidden py-20 sm:py-24"
+      className="relative w-full overflow-hidden py-24 sm:py-32"
     >
       <script
         type="application/ld+json"

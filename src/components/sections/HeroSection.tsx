@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { PhoneCall, Sparkles, ShieldCheck, Baby, GraduationCap } from "lucide-react";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
-import { PulsatingButton } from "@/components/ui/pulsating-button";
 
 const FloatingDoodle = ({
   children,
@@ -69,40 +68,41 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Floating doodles */}
+      {/* Elegant Glass Shapes */}
       <FloatingDoodle
-        className="absolute left-[6%] top-[18%] hidden sm:block"
+        className="absolute left-[8%] top-[15%] hidden sm:block"
         delay={0.2}
       >
-        <SunDoodle />
+        <GlassShape className="relative flex h-28 w-28 items-center justify-center rounded-full">
+          <div className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-[var(--sunshine-yellow)] opacity-50 blur-xl" />
+        </GlassShape>
       </FloatingDoodle>
       <FloatingDoodle
-        className="absolute right-[8%] top-[22%] hidden md:block"
+        className="absolute right-[10%] top-[20%] hidden md:block"
         delay={0.5}
         duration={7}
       >
-        <CloudDoodle />
+        <GlassShape className="relative flex h-36 w-24 items-center justify-center rounded-t-full">
+          <div className="absolute inset-x-0 bottom-4 m-auto h-20 w-16 rounded-full bg-[var(--sunshine-blue)] opacity-40 blur-xl" />
+        </GlassShape>
       </FloatingDoodle>
       <FloatingDoodle
-        className="absolute left-[10%] bottom-[14%] hidden md:block"
+        className="absolute bottom-[18%] left-[12%] hidden md:block"
         delay={0.4}
         duration={8}
       >
-        <BlockDoodle letter="A" color="#2F6CFF" />
+        <GlassShape className="relative flex h-32 w-16 -rotate-12 items-center justify-center rounded-full">
+          <div className="absolute inset-0 m-auto h-20 w-10 rounded-full bg-[var(--sunshine-magenta)] opacity-40 blur-xl" />
+        </GlassShape>
       </FloatingDoodle>
       <FloatingDoodle
-        className="absolute right-[12%] bottom-[20%] hidden md:block"
+        className="absolute bottom-[24%] right-[14%] hidden md:block"
         delay={0.7}
         duration={6.5}
       >
-        <BlockDoodle letter="B" color="#E54CB1" />
-      </FloatingDoodle>
-      <FloatingDoodle
-        className="absolute left-[40%] top-[8%] hidden lg:block"
-        delay={0.9}
-        duration={9}
-      >
-        <StarDoodle />
+        <GlassShape className="relative flex h-24 w-24 items-center justify-center rounded-2xl rotate-12">
+          <div className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-[var(--sunshine-green)] opacity-40 blur-xl" />
+        </GlassShape>
       </FloatingDoodle>
 
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
@@ -113,7 +113,7 @@ export function HeroSection() {
           className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white/90 px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-foreground shadow-sm sm:text-sm dark:border-yellow-300/40 dark:bg-slate-900/80 dark:text-slate-100"
         >
           <Sparkles className="h-4 w-4 text-[var(--sunshine-orange)] dark:text-yellow-300" />
-          Now Enrolling for Fall — Limited Spots
+          Limited spots available
         </motion.div>
 
         <motion.div
@@ -133,9 +133,9 @@ export function HeroSection() {
           />
         </motion.div>
 
-        <h1 className="font-heading text-4xl font-extrabold leading-[1.02] text-foreground text-balance sm:text-6xl lg:text-7xl xl:text-8xl dark:text-white">
-          <span className="block">A happy place to</span>
-          <AnimatedGradientText className="block text-5xl font-black sm:text-7xl lg:text-8xl">
+        <h1 className="font-heading text-5xl font-black leading-none tracking-tight text-foreground text-balance sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] dark:text-white">
+          <span className="block mb-2">A happy place to</span>
+          <AnimatedGradientText className="block pb-2">
             learn, grow & shine.
           </AnimatedGradientText>
         </h1>
@@ -150,18 +150,18 @@ export function HeroSection() {
         </p>
 
         <div className="mt-9 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
-          <PulsatingButton
+          <button
             type="button"
             onClick={() => {
               const target = document.getElementById("contact");
               target?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            className="w-full max-w-xs px-8 py-4 text-base sm:w-auto"
+            className="kid-shadow inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full border-2 border-[var(--sunshine-yellow)] bg-[var(--sunshine-yellow)] px-8 py-4 font-display text-base font-extrabold text-slate-900 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_24px_0_-10px_rgba(255,194,51,0.6),0_40px_60px_-25px_rgba(47,108,255,0.35)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 sm:w-auto"
             aria-label="Schedule a tour — jump to the contact form"
           >
             <Sparkles className="h-5 w-5" aria-hidden="true" />
             Schedule a Tour
-          </PulsatingButton>
+          </button>
           <a
             href="tel:+17184046909"
             aria-label="Call Sunshine's Learning Laboratory at (718) 404-6909"
@@ -190,74 +190,11 @@ export function HeroSection() {
     </section>
   );
 }
-
-function SunDoodle() {
+function GlassShape({ className, children }: { className?: string; children?: React.ReactNode }) {
   return (
-    <svg width="84" height="84" viewBox="0 0 100 100" aria-hidden="true">
-      <g className="animate-spin-slow" style={{ transformOrigin: "50% 50%" }}>
-        {Array.from({ length: 12 }).map((_, i) => (
-          <rect
-            key={i}
-            x="48"
-            y="4"
-            width="4"
-            height="12"
-            rx="2"
-            fill="#FF8A2B"
-            transform={`rotate(${i * 30} 50 50)`}
-          />
-        ))}
-      </g>
-      <circle cx="50" cy="50" r="22" fill="#FFC233" />
-      <circle cx="44" cy="46" r="2.4" fill="#1F2A44" />
-      <circle cx="56" cy="46" r="2.4" fill="#1F2A44" />
-      <path d="M42 56 Q50 62 58 56" stroke="#1F2A44" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function CloudDoodle() {
-  return (
-    <svg width="120" height="76" viewBox="0 0 120 76" aria-hidden="true">
-      <g fill="#FFFFFF" stroke="#5BC0F8" strokeWidth="3">
-        <ellipse cx="34" cy="48" rx="22" ry="18" />
-        <ellipse cx="62" cy="40" rx="26" ry="22" />
-        <ellipse cx="92" cy="50" rx="20" ry="16" />
-      </g>
-    </svg>
-  );
-}
-
-function BlockDoodle({ letter, color }: { letter: string; color: string }) {
-  return (
-    <svg width="62" height="62" viewBox="0 0 100 100" aria-hidden="true">
-      <rect x="6" y="6" width="88" height="88" rx="18" fill={color} />
-      <rect x="6" y="6" width="88" height="88" rx="18" fill="none" stroke="#1F2A44" strokeOpacity="0.18" strokeWidth="3" />
-      <text
-        x="50"
-        y="64"
-        textAnchor="middle"
-        fontFamily="Fredoka, sans-serif"
-        fontWeight="800"
-        fontSize="54"
-        fill="#FFFFFF"
-      >
-        {letter}
-      </text>
-    </svg>
-  );
-}
-
-function StarDoodle() {
-  return (
-    <svg width="60" height="60" viewBox="0 0 100 100" aria-hidden="true">
-      <path
-        d="M50 6 L60 38 L94 38 L66 58 L76 90 L50 70 L24 90 L34 58 L6 38 L40 38 Z"
-        fill="#E54CB1"
-        stroke="#1F2A44"
-        strokeOpacity="0.18"
-        strokeWidth="2"
-      />
-    </svg>
+    <div className={`overflow-hidden border border-white/40 bg-white/20 backdrop-blur-xl shadow-[0_12px_40px_rgba(31,42,68,0.08)] dark:border-white/10 dark:bg-white/5 dark:shadow-[0_12px_40px_rgba(0,0,0,0.4)] ${className}`}>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent dark:from-white/10" />
+      {children}
+    </div>
   );
 }

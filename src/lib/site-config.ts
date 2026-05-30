@@ -24,7 +24,7 @@ export const siteConfig = {
   ogImage: "/CTABANNER.png",
   phone: "(718) 404-6909",
   phoneE164: "+17184046909",
-  email: "hello@sunshineslearninglab.com",
+  email: "sunshineslearninglaboratoryinc@gmail.com",
   /** Real address from existing Footer. Confirm exact suite/floor before launch. */
   address: {
     streetAddress: "159-14 134th Avenue, 1st Floor", // TODO: confirm exact suite/floor with owner

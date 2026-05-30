@@ -14,22 +14,22 @@ const STATS = [
 
 const MOMENTS = [
   {
-    src: "/storycircle.png",
+    src: "/storycircle2.png",
     alt: "Story circle icon — kids gathered around a book at Sunshine's",
     label: "Story circle",
     badge: "Daily",
     color: "var(--sunshine-orange)",
   },
   {
-    src: "/images/sunshine-assets.png",
+    src: "/labtime3.png",
     alt: "Sunshine's Learning Laboratory branded science and STEM assets",
     label: "Mini lab time",
     badge: "STEM",
     color: "var(--sunshine-blue)",
   },
   {
-    src: "/danceparty.png",
-    alt: "Dance party icon — kids dancing together at Sunshine's",
+    src: "/danceparty_real.png",
+    alt: "Kids having a dance party at Sunshine's",
     label: "Dance party!",
     badge: "Fri",
     color: "var(--sunshine-magenta)",
@@ -40,7 +40,7 @@ export function MomentsSection() {
   return (
     <section
       id="moments"
-      className="relative w-full overflow-hidden py-20 sm:py-24"
+      className="relative w-full overflow-hidden py-24 sm:py-32"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">

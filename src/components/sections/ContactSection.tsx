@@ -91,7 +91,7 @@ export function ContactSection() {
     <section
       id="contact"
       aria-labelledby={`${baseId}-heading`}
-      className="relative w-full overflow-hidden py-20 sm:py-24"
+      className="relative w-full overflow-hidden py-24 sm:py-32"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(255,138,43,0.18),transparent_60%),radial-gradient(circle_at_bottom_left,rgba(91,192,248,0.18),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(255,138,43,0.10),transparent_60%),radial-gradient(circle_at_bottom_left,rgba(56,189,248,0.10),transparent_60%)]" />
 
@@ -122,10 +122,10 @@ export function ContactSection() {
             <li className="inline-flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3 font-display font-bold text-foreground shadow-sm ring-1 ring-foreground/5 backdrop-blur dark:bg-slate-900/80 dark:text-slate-100 dark:ring-white/10">
               <Mail className="h-5 w-5 text-[var(--sunshine-magenta)] dark:text-pink-400" aria-hidden="true" />
               <a
-                href="mailto:hello@sunshineslearninglab.com"
+                href="mailto:sunshineslearninglaboratoryinc@gmail.com"
                 className="hover:underline"
               >
-                hello@sunshineslearninglab.com
+                sunshineslearninglaboratoryinc@gmail.com
               </a>
             </li>
             <li className="inline-flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3 font-display font-bold text-foreground shadow-sm ring-1 ring-foreground/5 backdrop-blur dark:bg-slate-900/80 dark:text-slate-100 dark:ring-white/10">

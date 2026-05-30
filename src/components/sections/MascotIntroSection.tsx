@@ -34,7 +34,7 @@ export function MascotIntroSection() {
   return (
     <section
       id="mascot"
-      className="relative w-full overflow-hidden py-20 sm:py-24"
+      className="relative w-full overflow-hidden py-24 sm:py-32"
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-12 left-1/4 h-40 w-40 rounded-full bg-primary/20 blur-3xl dark:bg-primary/15" />

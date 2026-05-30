@@ -57,7 +57,7 @@ const PROGRAM_FEATURES = [
 
 export function CurriculumSection() {
   return (
-    <section id="curriculum" className="relative w-full py-20 sm:py-24">
+    <section id="curriculum" className="relative w-full py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-[var(--sunshine-cream)] to-transparent dark:from-slate-900/60 dark:via-slate-950/40 dark:to-transparent" />
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">

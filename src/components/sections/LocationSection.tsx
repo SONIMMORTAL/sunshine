@@ -29,7 +29,7 @@ export function LocationSection() {
     <section
       id="location"
       aria-labelledby={headingId}
-      className="relative w-full overflow-hidden py-20 sm:py-24"
+      className="relative w-full overflow-hidden py-24 sm:py-32"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,rgba(255,194,51,0.18),transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom,rgba(253,224,71,0.10),transparent_60%)]" />
 
