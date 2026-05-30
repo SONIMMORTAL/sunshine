@@ -160,11 +160,7 @@ export function InvestmentSection() {
                 {HOURS.map((h) => (
                   <li
                     key={h.day}
-                    className={`flex items-center justify-between py-3 font-display ${
-                      h.highlight
-                        ? "rounded-2xl bg-primary/15 px-3 -mx-3 font-extrabold text-foreground dark:bg-yellow-500/15 dark:text-yellow-200"
-                        : "text-foreground dark:text-slate-200"
-                    }`}
+                    className="flex items-center justify-between py-3 font-display text-foreground dark:text-slate-200"
                   >
                     <span className="font-bold dark:text-slate-300">{h.day}</span>
                     <span className="dark:text-yellow-300">{h.time}</span>
