@@ -99,7 +99,7 @@ export function InvestmentSection() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: i * 0.06, duration: 0.5 }}
               whileHover={{ y: p.featured ? -8 : -4 }}
-              className={`relative flex flex-col overflow-hidden rounded-[28px] border-4 p-6 transition-shadow duration-300 ${
+              className={`relative flex flex-col rounded-[28px] border-4 p-6 transition-shadow duration-300 ${
                 p.featured
                   ? "border-[var(--sunshine-yellow)] bg-white shadow-[0_30px_0_-20px_rgba(255,194,51,0.6),0_30px_60px_-30px_rgba(31,42,68,0.4)] hover:shadow-[0_40px_0_-22px_rgba(255,194,51,0.7),0_40px_80px_-30px_rgba(31,42,68,0.45)] lg:-translate-y-2 lg:scale-[1.04] dark:bg-yellow-500/10 dark:border-yellow-400/40 dark:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] dark:hover:shadow-[0_40px_80px_-30px_rgba(0,0,0,0.75)]"
                   : "border-white bg-white shadow-xl hover:shadow-2xl dark:bg-slate-900 dark:border-white/10 dark:hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]"
