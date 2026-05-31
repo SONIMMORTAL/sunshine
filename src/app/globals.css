@@ -202,6 +202,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+    pointer-events: none;
+  }
   html {
     @apply font-sans;
   }
