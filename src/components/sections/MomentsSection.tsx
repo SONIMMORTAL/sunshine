@@ -111,7 +111,7 @@ export function MomentsSection() {
           ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-4 rounded-[32px] border-4 border-white bg-white/80 p-6 shadow-xl backdrop-blur sm:grid-cols-4 sm:p-8 dark:border-white/10 dark:bg-slate-900/80">
+        <div className="mt-16 grid grid-cols-2 gap-4 rounded-[32px] border-4 border-white bg-white/95 p-6 shadow-xl sm:grid-cols-4 sm:p-8 dark:border-white/10 dark:bg-slate-900/95">
           {STATS.map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-heading text-4xl font-black text-foreground sm:text-5xl dark:text-white">

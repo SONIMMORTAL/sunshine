@@ -192,7 +192,7 @@ export function HeroSection() {
 }
 function GlassShape({ className, children }: { className?: string; children?: React.ReactNode }) {
   return (
-    <div className={`overflow-hidden border border-white/40 bg-white/20 backdrop-blur-xl shadow-[0_12px_40px_rgba(31,42,68,0.08)] dark:border-white/10 dark:bg-white/5 dark:shadow-[0_12px_40px_rgba(0,0,0,0.4)] ${className}`}>
+    <div className={`overflow-hidden border border-white/40 bg-white/60 shadow-[0_12px_40px_rgba(31,42,68,0.08)] dark:border-white/10 dark:bg-slate-800/80 dark:shadow-[0_12px_40px_rgba(0,0,0,0.4)] ${className}`}>
       <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent dark:from-white/10" />
       {children}
     </div>
