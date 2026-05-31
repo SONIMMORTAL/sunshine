@@ -117,15 +117,6 @@ const GALLERY_BOTTOM = [
     photo: true,
     momTag: false,
   },
-  {
-    src: "/gallery6.png",
-    alt: "Kids making friends",
-    caption: "Making friends",
-    accent: "bg-[var(--sunshine-blue)]",
-    rotate: 1,
-    photo: true,
-    momTag: false,
-  },
 ];
 
 interface Photo {
