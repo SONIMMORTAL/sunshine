@@ -70,7 +70,7 @@ export const siteConfig = {
    * Used to enumerate Offer items in the LocalBusiness JSON-LD.
    */
   programs: [
-    { name: "Infants", ageRange: "6 weeks – 18 months", description: "Tiny ratios, sensory play, daily logs." },
+    { name: "Infants", ageRange: "6 weeks – 18 months", description: "Tiny ratios, sensory play, dedicated caregivers." },
     { name: "Toddlers", ageRange: "18 months – 3 years", description: "Potty training, language explosion, music & movement." },
     { name: "Preschool", ageRange: "3 – 5 years", description: "Phonics, math, STEM lab, daily Spanish immersion." },
     { name: "Pre-K", ageRange: "4 – 5 years", description: "Kindergarten readiness, writing & reading prep." },

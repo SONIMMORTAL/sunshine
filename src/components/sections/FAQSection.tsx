@@ -14,47 +14,62 @@ const FAQS: readonly FaqEntry[] = [
   {
     question: "What hours are you open?",
     answer:
-      "We&rsquo;re open Monday through Friday from 8:00 AM to 6:00 PM. We&rsquo;re closed on major federal holidays.",
+      "We&rsquo;re open Monday through Friday from 8:00 AM to 6:00 PM. We are closed on major federal holidays.",
   },
   {
     question: "What are your teacher-to-child ratios?",
     answer:
-      "We exceed New York State requirements: typically 1:4 for infants, 1:5 for young toddlers, 1:7 for older toddlers, and 1:9 for preschool. Small groups mean more cuddles, more conversation, and more individualized learning.",
+      "We maintain attentive, small-group care that exceeds New York State requirements. For every 2 infants there is 1 dedicated adult. When the group includes 4 infants with additional toddlers, we staff a lead provider plus a full-time assistant. Our overall classroom capacities are 2 infants, 4 toddlers, and 2 after-school children per teacher.",
   },
   {
     question: "Are meals and snacks included?",
     answer:
-      "Yes &mdash; weekly tuition includes a hot breakfast, lunch, and two snacks. Menus are pediatrician-reviewed, kid-tested, and rotate every two weeks. We accommodate allergies and most dietary restrictions; please share specifics on your tour.<br/><br/><strong>Milk Policy:</strong> If your child prefers or requires a specific type of milk, please provide enough for the duration of their stay. Please note that New York State regulations require us to serve whole milk to children under 1 year of age, and 1% milk to children 2 and older, unless we have a doctor's note on file suggesting an alternative.",
+      "Yes &mdash; weekly tuition includes a hot breakfast, lunch, and two snacks. Menus are pediatrician-reviewed, kid-tested, and rotate every two weeks. We accommodate allergies and most dietary restrictions; please share specifics during your visit.<br/><br/><strong>Milk Policy:</strong> If your child prefers or requires a specific type of milk, please provide enough for the duration of their stay. New York State regulations require us to serve whole milk to children under 1 year of age and 1% milk to children 2 and older, unless a doctor&rsquo;s note on file indicates an alternative.",
   },
   {
     question: "Do you offer an After School program and transportation?",
     answer:
-      "We offer a wonderful After School program! While we do not provide our own transportation, you can easily coordinate with your child's school to designate Sunshine's Learning Laboratory as their official school bus drop-off location.",
+      "We offer a wonderful After School program! While we do not provide our own transportation, you can easily coordinate with your child&rsquo;s school to designate Sunshine&rsquo;s Learning Laboratory as their official school-bus drop-off location.",
   },
   {
-    question: "What is your sick policy?",
+    question: "What is your illness policy?",
     answer:
-      "Children must be fever-free (and free of any contagious symptoms) for at least 24 hours without medication before returning. We follow NYC DOH and NYS OCFS guidance and notify all families if there&rsquo;s an exposure in the program.",
+      "When a child develops a fever or becomes severely ill in a way that could affect other children, a parent or approved guardian will be contacted immediately and must retrieve their child without delay. Children must be fever-free and symptom-free for at least 24&nbsp;hours without medication before returning to care. We follow NYC DOH and NYS OCFS guidance and notify all families promptly if there is an exposure in the program.",
   },
   {
     question: "How do you keep kids safe?",
     answer:
-      "Our facility is keypad-secured with a check-in/out app, security cameras throughout common spaces, and 100% of staff are background-checked, fingerprinted, and CPR/First-Aid certified. We run monthly safety drills and post our NYS license on-site.",
+      "Our facility features keypad-secured entry, security cameras throughout common spaces, and 100% of staff are background-checked, fingerprinted, and CPR/First-Aid certified. We conduct monthly safety drills and our NYS license is posted on-site at all times.",
   },
   {
     question: "Tell me about the curriculum.",
     answer:
-      "We follow a Montessori-inspired, whole-child curriculum across our four pillars &mdash; Learn, Grow, Play, Share. Daily routines include literacy, early math and STEM lab, Spanish immersion, art studio, music & movement, and lots of outdoor and free-choice play.",
+      "We follow a Montessori-inspired, whole-child curriculum across our four pillars &mdash; Learn, Grow, Play, Share. Daily routines include literacy, early math and STEM lab, Spanish immersion, art studio, music &amp; movement, and plenty of outdoor and free-choice play.",
   },
   {
     question: "How do you support transitions for new families?",
     answer:
-      "We schedule a free 90-minute play visit before your child&rsquo;s first day, share daily photos and notes via our parent app, and assign a primary caregiver so your child has a familiar face from day one. Most kids settle within a week.",
+      "Your child&rsquo;s first day is a half-day orientation so they can get comfortable with their new teachers and classmates in a relaxed setting. We also assign a primary caregiver so your child has a familiar, trusted face from day one. Most children settle in beautifully within the first week.",
   },
   {
-    question: "Do you accept vouchers or offer tuition assistance?",
+    question: "Do you accept vouchers?",
     answer:
-      "Yes &mdash; we accept ACS, HRA, and CCAP vouchers and offer sibling discounts and a need-based scholarship for qualifying families. Call (718) 404-6909 and we&rsquo;ll walk you through it.",
+      "Yes &mdash; we accept HRA and ACS vouchers. Please call us at (718)&nbsp;404-6909 and we&rsquo;ll be happy to walk you through the process.",
+  },
+  {
+    question: "What forms of payment do you accept?",
+    answer:
+      "We accept Cash, Debit, Zelle, and PayPal. We also accept HRA and ACS vouchers. Please contact us if you have any questions about payment arrangements.",
+  },
+  {
+    question: "What medical records are required for enrollment?",
+    answer:
+      "All immunization (shot) records and medical examination forms must be current and up to date at the time of enrollment. We are required by New York State to keep these documents on file, and they must remain current throughout your child&rsquo;s time in our program.",
+  },
+  {
+    question: "Do you accommodate children with special needs?",
+    answer:
+      "Absolutely. Our staff includes autism spectrum&ndash;trained caregivers. Parents of children with special needs are required to provide a signed letter from their therapist, psychiatrist, or physician that clearly states the child&rsquo;s diagnosis, specific care requirements, and any accommodations needed. We also accept current Individualized Education Programs (IEPs).",
   },
 ];
 

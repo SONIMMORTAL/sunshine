@@ -16,7 +16,7 @@ const PROGRAMS = [
     perks: [
       "Tiny ratios & cuddles",
       "Sensory & tummy time",
-      "Daily diaper & meal log",
+      "Dedicated caregivers",
     ],
   },
   {

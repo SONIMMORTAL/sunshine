@@ -13,7 +13,7 @@ const NAV = [
   { label: "Gallery", href: "#gallery" },
   { label: "Tuition", href: "#tuition" },
   { label: "FAQ", href: "#faq" },
-  { label: "Visit", href: "#location" },
+
 ];
 
 /**

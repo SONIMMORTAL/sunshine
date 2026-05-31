@@ -8,7 +8,7 @@ import { MomentsSection } from "@/components/sections/MomentsSection";
 import { InvestmentSection } from "@/components/sections/InvestmentSection";
 import { SocialProofSection } from "@/components/sections/SocialProofSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { LocationSection } from "@/components/sections/LocationSection";
+
 import { ContactSection } from "@/components/sections/ContactSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { Footer } from "@/components/sections/Footer";
@@ -33,7 +33,7 @@ export default function Home() {
           <InvestmentSection />
           <SocialProofSection />
           <FAQSection />
-          <LocationSection />
+
           <ContactSection />
           <CTASection />
         </PageTransition>

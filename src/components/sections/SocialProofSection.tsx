@@ -33,6 +33,27 @@ const TESTIMONIALS = [
     bg: "bg-[var(--sunshine-green)]/30",
     rotate: 1,
   },
+  {
+    name: "Tanya W.",
+    relation: "Mom of Jayden (1)",
+    body: "I was so nervous leaving my baby for the first time, but the staff made the transition seamless. Jayden lights up every morning at drop-off now.",
+    bg: "bg-[var(--sunshine-orange)]/30",
+    rotate: -1.5,
+  },
+  {
+    name: "David L.",
+    relation: "Dad of Ava (3)",
+    body: "Ava's vocabulary has exploded since she started here. The curriculum is genuinely impressive — way beyond what I expected from a daycare.",
+    bg: "bg-[var(--sunshine-sky)]/30",
+    rotate: 1.5,
+  },
+  {
+    name: "Keisha M.",
+    relation: "Mom of Isaiah (6)",
+    body: "The after-school program has been a lifesaver for our family. Isaiah gets his homework done, makes friends, and actually looks forward to going every day.",
+    bg: "bg-[var(--sunshine-yellow)]/30",
+    rotate: -2.5,
+  },
 ];
 
 export function SocialProofSection() {
@@ -58,7 +79,7 @@ export function SocialProofSection() {
                 { imageUrl: "https://i.pravatar.cc/150?img=5", profileUrl: "#" },
                 { imageUrl: "https://i.pravatar.cc/150?img=12", profileUrl: "#" },
               ]}
-              numPeople={8}
+              numPeople={14}
             />
             <div className="flex items-center gap-1" aria-label="5 out of 5 stars">
               {[...Array(5)].map((_, i) => (
