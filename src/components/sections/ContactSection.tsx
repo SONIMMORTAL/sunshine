@@ -115,8 +115,8 @@ export function ContactSection() {
           <ul className="mt-7 grid gap-3">
             <li className="inline-flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3 font-display font-bold text-foreground shadow-sm ring-1 ring-foreground/5 backdrop-blur dark:bg-slate-900/80 dark:text-slate-100 dark:ring-white/10">
               <PhoneCall className="h-5 w-5 text-[var(--sunshine-blue)] dark:text-sky-300" aria-hidden="true" />
-              <a href="tel:+17184046909" className="hover:underline">
-                (718) 404-6909
+              <a href="tel:+19299254152" className="hover:underline">
+                (929) 925-4152
               </a>
             </li>
             <li className="inline-flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3 font-display font-bold text-foreground shadow-sm ring-1 ring-foreground/5 backdrop-blur dark:bg-slate-900/80 dark:text-slate-100 dark:ring-white/10">
@@ -249,8 +249,8 @@ export function ContactSection() {
                   <p className="font-display text-sm font-bold">
                     Thanks! We received your message and will reach out within a
                     few hours. (Want it faster? Call{" "}
-                    <a className="underline" href="tel:+17184046909">
-                      (718) 404-6909
+                    <a className="underline" href="tel:+19299254152">
+                      (929) 925-4152
                     </a>
                     .)
                   </p>
@@ -268,7 +268,7 @@ export function ContactSection() {
                   <AlertTriangle className="mt-0.5 h-5 w-5 text-[var(--sunshine-red)] dark:text-rose-300" aria-hidden="true" />
                   <p className="font-display text-sm font-bold">
                     {serverMessage || "Something went wrong."}{" "}
-                    <a className="underline" href="tel:+17184046909">
+                    <a className="underline" href="tel:+19299254152">
                       Call us instead.
                     </a>
                   </p>

@@ -116,7 +116,7 @@ export default function OpenGraphImage() {
               background: "rgba(255,255,255,0.92)",
             }}
           >
-            (718) 404-6909
+            (929) 925-4152
           </span>
         </div>
       </div>

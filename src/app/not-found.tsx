@@ -30,10 +30,10 @@ export default function NotFound() {
           Back to home
         </Link>
         <a
-          href="tel:+17184046909"
+          href="tel:+19299254152"
           className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-foreground/15 bg-white px-7 py-4 font-display text-base font-extrabold text-foreground shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40"
         >
-          Call (718) 404-6909
+          Call (929) 925-4152
         </a>
       </div>
     </div>

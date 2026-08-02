@@ -17,20 +17,19 @@ export const siteConfig = {
   legalName: "Sunshine's Learning Laboratory Inc.",
   tagline: "A happy place to learn, grow & shine.",
   description:
-    "NYS-licensed daycare and learning lab in Jamaica, NY for ages 6 weeks – 12 years. Montessori-inspired classrooms, STEM lab, Spanish immersion. Book a tour today: (718) 404-6909.",
+    "NYS-licensed daycare and learning lab in Jamaica, NY for ages 6 weeks – 12 years. Montessori-inspired classrooms, STEM lab, Spanish immersion. Book a tour today: (929) 925-4152.",
   shortDescription:
     "Joyful NYS-licensed daycare in Jamaica, NY — ages 6 weeks to 12 years.",
   url: SITE_URL,
   ogImage: "/CTABANNER.png",
-  phone: "(718) 404-6909",
-  phoneE164: "+17184046909",
+  phone: "(929) 925-4152",
+  phoneE164: "+19299254152",
   email: "sunshineslearninglaboratoryinc@gmail.com",
-  /** Real address from existing Footer. Confirm exact suite/floor before launch. */
+  /** General location — street address intentionally omitted. */
   address: {
-    streetAddress: "159-14 134th Avenue, 1st Floor", // TODO: confirm exact suite/floor with owner
     addressLocality: "Jamaica",
     addressRegion: "NY",
-    postalCode: "11434", // TODO: confirm zip code
+    postalCode: "11434",
     addressCountry: "US",
   },
   /** TODO (owner): replace with real lat/lng (use Google Maps "What's here?"). */

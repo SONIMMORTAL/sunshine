@@ -35,7 +35,6 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
     priceRange: siteConfig.priceRange,
     address: {
       "@type": "PostalAddress",
-      streetAddress: siteConfig.address.streetAddress,
       addressLocality: siteConfig.address.addressLocality,
       addressRegion: siteConfig.address.addressRegion,
       postalCode: siteConfig.address.postalCode,

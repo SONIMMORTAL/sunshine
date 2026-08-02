@@ -107,24 +107,22 @@ export function CTASection() {
             </PulsatingButton>
           </div>
           <a
-            href="tel:+17184046909"
-            aria-label="Call Sunshine's Learning Laboratory at (718) 404-6909"
+            href="tel:+19299254152"
+            aria-label="Call Sunshine's Learning Laboratory at (929) 925-4152"
             className="inline-flex items-center gap-3 rounded-full bg-white px-7 py-5 font-display text-lg font-extrabold text-[#1F2A44] shadow-xl transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
           >
             <PhoneCall className="h-5 w-5 text-[var(--sunshine-blue)]" aria-hidden="true" />
-            (718) 404-6909
+            (929) 925-4152
           </a>
         </div>
 
         <div className="mt-10 grid w-full max-w-3xl gap-4 sm:grid-cols-2">
           <a
-            href="https://maps.google.com/?q=159-14+134th+Avenue,+1st+Floor,+Jamaica,+NY+11434"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#location"
             className="inline-flex items-center justify-center gap-3 rounded-3xl border-2 border-white/40 bg-white/30 px-5 py-4 font-display text-base font-bold text-[#1F2A44] backdrop-blur transition-colors hover:bg-white/50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/60"
           >
             <MapPin className="h-5 w-5" aria-hidden="true" />
-            159-14 134th Ave, Jamaica, NY 11434
+            Jamaica Queens, 11434
           </a>
           <a
             href="mailto:sunshineslearninglaboratoryinc@gmail.com"

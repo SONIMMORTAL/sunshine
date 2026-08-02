@@ -54,7 +54,7 @@ const FAQS: readonly FaqEntry[] = [
   {
     question: "Do you accept vouchers?",
     answer:
-      "Yes &mdash; we accept HRA and ACS vouchers. Please call us at (718)&nbsp;404-6909 and we&rsquo;ll be happy to walk you through the process.",
+      "Yes &mdash; we accept HRA and ACS vouchers. Please call us at (929)&nbsp;925-4152 and we&rsquo;ll be happy to walk you through the process.",
   },
   {
     question: "What forms of payment do you accept?",
@@ -131,8 +131,8 @@ export function FAQSection() {
           <p className="mt-4 font-display text-lg text-muted-foreground sm:text-xl text-pretty dark:text-slate-300">
             Quick answers about hours, ratios, meals, safety and more. Don&rsquo;t see
             yours? Call us at{" "}
-            <a className="font-bold text-foreground underline dark:text-yellow-300" href="tel:+17184046909">
-              (718) 404-6909
+            <a className="font-bold text-foreground underline dark:text-yellow-300" href="tel:+19299254152">
+              (929) 925-4152
             </a>
             .
           </p>
@@ -190,10 +190,10 @@ export function FAQSection() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
-              href="tel:+17184046909"
+              href="tel:+19299254152"
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-foreground/15 bg-white px-5 py-3 font-display text-sm font-extrabold text-foreground shadow-sm transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 dark:border-white/15 dark:bg-slate-950 dark:text-slate-100"
             >
-              Call (718) 404-6909
+              Call (929) 925-4152
             </a>
             <a
               href="#contact"

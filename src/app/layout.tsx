@@ -130,8 +130,7 @@ export default function RootLayout({
         {/* Performance: preconnect to third-party origins used on the page */}
         <link rel="preconnect" href="https://i.pravatar.cc" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://i.pravatar.cc" />
-        <link rel="dns-prefetch" href="https://maps.google.com" />
-        <link rel="dns-prefetch" href="https://www.google.com" />
+
       </head>
       <body className="min-h-full flex flex-col">
         <script
@@ -144,7 +143,7 @@ export default function RootLayout({
         />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

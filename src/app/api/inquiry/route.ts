@@ -82,7 +82,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("[Sunshine inquiry] failed", error);
     return NextResponse.json(
-      { ok: false, error: "Something went wrong. Please call (718) 404-6909." },
+      { ok: false, error: "Something went wrong. Please call (929) 925-4152." },
       { status: 500 },
     );
   }

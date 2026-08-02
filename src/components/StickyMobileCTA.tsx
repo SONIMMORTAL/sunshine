@@ -40,8 +40,8 @@ export function StickyMobileCTA() {
           className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-3 border-t-2 border-primary/20 bg-background/95 px-4 pb-[max(env(safe-area-inset-bottom),12px)] pt-3 shadow-[0_-12px_30px_-18px_rgba(31,42,68,0.35)] backdrop-blur md:hidden"
         >
           <a
-            href="tel:+17184046909"
-            aria-label="Call Sunshine's Learning Laboratory at (718) 404-6909"
+            href="tel:+19299254152"
+            aria-label="Call Sunshine's Learning Laboratory at (929) 925-4152"
             className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-foreground/15 bg-white text-foreground shadow"
           >
             <PhoneCall className="h-5 w-5 text-[var(--sunshine-blue)]" aria-hidden="true" />

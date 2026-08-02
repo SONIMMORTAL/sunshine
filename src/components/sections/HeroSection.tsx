@@ -163,12 +163,12 @@ export function HeroSection() {
             Schedule a Tour
           </button>
           <a
-            href="tel:+17184046909"
-            aria-label="Call Sunshine's Learning Laboratory at (718) 404-6909"
+            href="tel:+19299254152"
+            aria-label="Call Sunshine's Learning Laboratory at (929) 925-4152"
             className="inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full border-2 border-foreground/15 bg-white px-7 py-4 font-display text-base font-bold text-foreground shadow-md transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 sm:w-auto dark:bg-slate-900 dark:text-slate-100 dark:border-white/15"
           >
             <PhoneCall className="h-5 w-5 text-[var(--sunshine-blue)]" aria-hidden="true" />
-            (718) 404-6909
+            (929) 925-4152
           </a>
         </div>
 
