@@ -9,7 +9,7 @@
  *   - canonical site URL once the domain is final
  */
 
-export const SITE_URL = "https://sunshineslearninglab.com";
+export const SITE_URL = "https://sunshineslab.com";
 
 export const siteConfig = {
   name: "Sunshine's Learning Laboratory",
